@@ -1,0 +1,293 @@
+@prefix : <https://w3id.org/gerps/ontology/software/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix schema: <https://schema.org/> .
+@base <https://w3id.org/gerps/ontology/software/> .
+
+<https://w3id.org/gerps/ontology/software> rdf:type owl:Ontology ;
+                                                 owl:versionIRI <https://w3id.org/gerps/ontology/software/1.0/> ;
+                                                 owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
+                                                 dct:abstract "Ontologie, die Software, ihre Dokumentation und Informationen über aktive Softwareinstanzen darstellt."@de ,
+                                                              "Ontology representing software, its documentation and information about deployed instances of software."@en ;
+                                                 dct:contributor "Heinz Conti Zacherl" ,
+                                                                 "Maximilian Enderling" ,
+                                                                 "Maximilian Raupach" ;
+                                                 dct:creator "openDVA" ;
+                                                 dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                 dct:modified "20 Dec, 2024" ;
+                                                 dct:title "GerPS-Software"@de ,
+                                                           "GerPS-Software"@en ;
+                                                 vann:preferredNamespacePrefix "gos"@en ;
+                                                 vann:preferredNamespaceUri "https://w3id.org/gerps/ontology/software" ;
+                                                 dct:description "![Diagram](gos_diagram.svg)" ;
+                                                 rdfs:comment "Diese Ontologie basiert auf den Kompetenzfragen unter: /docs/cq.md"@de ,
+                                                              "This ontology is based on the competency questions available under: /docs/cq.md"@en ;
+                                                 owl:versionInfo "1.0" ;
+                                                 schema:citation "Cite this vocabulary as: openDVA, GerPS-Software"@en ,
+                                                                 "Zitieren Sie dieses Vokabular als: openDVA, GerPS-Software"@de .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+dct:abstract rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/citation
+schema:citation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0001
+:GPS_0000001 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+             rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000030> ;
+             rdfs:range :GPS_0000003 ;
+             rdfs:comment "Links an information content entity to the technical component that it provides documentation for."@en ,
+                          "Verknüpft eine Informationsinhalt-Entität mit der technischen Komponente, für die sie Dokumentation bereitstellt."@de ;
+             rdfs:label "documents"@en ,
+                        "dokumentiert"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0011
+:GPS_0000011 rdf:type owl:ObjectProperty ;
+             rdfs:domain :GPS_0000003 ;
+             rdfs:range :GPS_0000007 ;
+             rdfs:comment "Links a technical component to the organisation that created or developed it."@en ,
+                          "Verbindet eine technische Komponente mit der Organisation, die sie geschaffen oder entwickelt hat."@de ;
+             rdfs:label "authored by"@en ,
+                        "hat den Autor"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0012
+:GPS_0000012 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :GPS_0000001 ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000030> ;
+             rdfs:range :GPS_0000003 ;
+             rdfs:comment "Links an information content entity to the technical component that it serves as the primary documentation for, indicating that the information content entity is the most authoritative or comprehensive source of information about the technical component."@en ,
+                          "Verknüpft eine Informationsinhaltseinheit mit der technischen Komponente, für die sie als primäre Dokumentation dient, und zeigt damit an, dass die Informationsinhaltseinheit die maßgebliche oder umfassendste Quelle für Informationen über die technische Komponente ist."@de ;
+             rdfs:label "is primary documentation of"@en ,
+                        "ist Hauptdokumentation von"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0013
+:GPS_0000013 rdf:type owl:ObjectProperty ;
+             rdfs:domain :GPS_0000016 ;
+             rdfs:range :GPS_0000007 ;
+             rdfs:comment "Links a service instance to the organisation that operates or manages it."@en ,
+                          "Verbindet eine Dienstinstanz mit der Organisation, die sie betreibt oder verwaltet."@de ;
+             rdfs:label "run by"@en ,
+                        "wird betrieben von"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0015
+:GPS_0000015 rdf:type owl:ObjectProperty ;
+             rdfs:domain :GPS_0000016 ;
+             rdfs:range :GPS_0000005 ;
+             rdfs:comment "Links a service instance to the software that it is an instance of, indicating the specific software implementation being used."@en ,
+                          "Verknüpft eine Dienstinstanz mit der Software, von der sie eine Instanz ist, und gibt die spezifische Softwareimplementierung an, die verwendet wird."@de ;
+             rdfs:label "Instanz von"@de ,
+                        "instance of"@en .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0018
+:GPS_0000018 rdf:type owl:ObjectProperty ;
+             rdfs:domain <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> ;
+             rdfs:range :GPS_0000017 ;
+             rdfs:comment "Links a task to the automation component that performs it, indicating the component responsible for automation."@en ,
+                          "Verknüpft eine Aufgabe mit der Automatisierungskomponente, die sie ausführt, und gibt an, welche Komponente für die Automatisierung zuständig ist."@de ;
+             rdfs:label "automated by"@en ,
+                        "automatisiert durch"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0019
+:GPS_0000019 rdf:type owl:ObjectProperty ;
+             rdfs:domain :GPS_0000017 ;
+             rdfs:range :GPS_0000005 ;
+             rdfs:label "benötigt Instanz von"@de ,
+                        "requires instance of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0014
+:GPS_0000014 rdf:type owl:DatatypeProperty ;
+             rdfs:domain :GPS_0000016 ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Gibt die Basis-URL einer Ressource an, die als Grundlage für die Konstruktion vollständiger URLs dient."@de ,
+                          "Specifies the base URL of a resource, providing a foundation for constructing full URLs."@en ;
+             rdfs:label "has base URL"@en ,
+                        "hat die Basis-URL"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0021
+:GPS_0000021 rdf:type owl:DatatypeProperty ;
+             rdfs:domain :GPS_0000016 ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Gibt die Parameter an, die zum Zugriff auf eine Service-Instanz erforderlich sind, wie z.B. Authentifizierungsdaten oder API-Schlüssel."@de ,
+                          "Specifies the parameters required to access a service instance, such as authentication credentials or API keys."@en ;
+             rdfs:label "has access parameters"@en ,
+                        "hat die Zugriffs-Parameter"@de .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/OBI_0000245
+<http://purl.obolibrary.org/obo/OBI_0000245> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000450
+<http://purl.obolibrary.org/obo/OBI_0000450> rdf:type owl:Class .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_0000001
+<http://www.ebi.ac.uk/swo/SWO_0000001> rdf:type owl:Class .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_9000050
+<http://www.ebi.ac.uk/swo/SWO_9000050> rdf:type owl:Class .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0002
+:GPS_0000002 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+             rdfs:comment "Schriftliche Aufzeichnungen und Beschreibungen eines Produkts, Systems oder Prozesses, die erstellt werden, um den Benutzern zu helfen, das Produkt zu verstehen, zu bedienen und zu warten."@de ,
+                          "Written records and descriptions of a product, system, or process, created to help users understand, operate, and maintain it."@en ;
+             rdfs:label "Documentation"@en ,
+                        "Dokumentation"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0003
+:GPS_0000003 rdf:type owl:Class ;
+             rdfs:comment "A technical component is a distinct unit within a system that can be implemented to perform specific functions."@en ,
+                          "Eine technische Komponente ist eine eigenständige Einheit innerhalb eines Systems, die zur Ausführung bestimmter Funktionen eingesetzt werden kann."@de ;
+             rdfs:label "Technical Component"@en ,
+                        "Technische Komponente"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0004
+:GPS_0000004 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ,
+                             :GPS_0000003 ;
+             rdfs:comment "A type of technical component, specifically an organized format for storing and managing data."@en ,
+                          "Eine Art von technischer Komponente, insbesondere ein organisiertes Format für die Speicherung und Verwaltung von Daten."@de ;
+             rdfs:label "Datastructure"@en ,
+                        "Datenstruktur"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0005
+:GPS_0000005 rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000001> ,
+                             :GPS_0000006 ;
+             rdfs:comment "A type of technical component, specifically a set of instructions executed by a computer."@en ,
+                          "Eine Art von technischem Bauteil, insbesondere eine Reihe von Anweisungen, die von einem Computer ausgeführt werden."@de ;
+             rdfs:label "Software"@de ,
+                        "Software"@en .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0006
+:GPS_0000006 rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_9000050> ,
+                             :GPS_0000003 ;
+             rdfs:comment "A type of technical component, specifically rules governing data exchange between systems."@en ,
+                          "Eine Art von technischer Komponente, insbesondere Regeln für den Datenaustausch zwischen Systemen."@de ;
+             rdfs:label "Protocol"@en ,
+                        "Protokol"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0007
+:GPS_0000007 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000245> ;
+             rdfs:comment "An organization is a structured group of people working together to achieve a common goal. It can assume the role of author for any result created by its constituents."@en ,
+                          "Eine Organisation ist eine strukturierte Gruppe von Menschen, die zusammenarbeiten, um ein gemeinsames Ziel zu erreichen. Sie kann die Rolle des Autors für jedes von ihren Mitgliedern geschaffene Ergebnis übernehmen."@de ;
+             rdfs:label "Organisation"@de ,
+                        "Organization"@en .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0008
+:GPS_0000008 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000450> ,
+                             :GPS_0000007 ;
+             rdfs:comment "A governmental administration is an organization which fulfils and is directly responsible for services assigned by the state."@en ,
+                          "Eine staatliche Verwaltung ist eine Organisation, die vom Staat zugewiesene Aufgaben erfüllt und direkt für diese verantwortlich ist."@de ;
+             rdfs:label "Governmental Administration"@en ,
+                        "Öffentliche Verwaltung"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0009
+:GPS_0000009 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+             rdfs:comment "Schriftlicher Inhalt, der in der Regel in einer Zeitung, einem Magazin oder online veröffentlicht wird und Informationen, Analysen oder Meinungen zu einem bestimmten Thema, Ereignis oder einer Frage enthält."@de ,
+                          "Written piece of content, typically published in a newspaper, magazine, or online, that provides information, analysis, or opinion on a specific topic, event, or issue."@en ;
+             rdfs:label "Article"@en ,
+                        "Artikel"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0010
+:GPS_0000010 rdf:type owl:Class ;
+             rdfs:subClassOf :GPS_0000005 ;
+             rdfs:comment "Im Allgemeinen eine Software, die genutzt wird, um geschäftliche Funktionalitäten auszuführen oder zu unterstützen. Dies können in der föderalen IT-Landschaft konkret Online-Antragsdienste für die Erstellung und den Versand von Anträgen an die öffentliche Verwaltung sein. Fachapplikationen können jedoch auch Fachverfahren sein, die Anträge entgegennehmen bzw. andere fachliche Prozesse innerhalb der öffentlichen Verwaltung IT-seitig unterstützen. Der Begriff der Fachapplikation ist als eine logische Einheit zu verstehen, die keine Aussage über die technische Komplexität des Informationssystems trifft."@de ,
+                          "In general, software that is used to execute or support business functionalities. In the federal IT landscape, these can specifically be online application services for creating and sending applications to the public administration. However, specialist applications can also be specialist procedures that accept applications or provide IT support for other specialist processes within the public administration. The term specialist application is to be understood as a logical unit that makes no statement about the technical complexity of the information system."@en ;
+             rdfs:label "Administrative specialized application"@en ,
+                        "Fachapplikation"@de .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0016
+:GPS_0000016 rdf:type owl:Class ;
+             rdfs:comment "A specific instance of software that can be accessed via a URL."@en ,
+                          "Eine konkrete Instanz einer Software, die über eine URL erreichbar ist."@de ;
+             rdfs:label "Service-Instanz"@de ,
+                        "service instance"@en .
+
+
+###  https://w3id.org/gerps/ontology/software/GERPSS_0017
+:GPS_0000017 rdf:type owl:Class ;
+             rdfs:comment "A self-contained module that directly automates a specific task or process, encapsulating necessary logic and actions, and may depend on external software, systems, or services to perform its function."@en ,
+                          "Ein in sich geschlossenes Modul, das eine bestimmte Aufgabe oder einen bestimmten Prozess direkt automatisiert, indem es die erforderliche Logik und die notwendigen Aktionen kapselt, und das zur Erfüllung seiner Funktion von externer Software, Systemen oder Diensten abhängig sein kann."@de ;
+             rdfs:label "Automation Component"@en ,
+                        "Automatisierungskomponente"@de .
+
+
+###  https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
