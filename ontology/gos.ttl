@@ -10,7 +10,7 @@
 @base <https://w3id.org/gerps/ontology/software/> .
 
 <https://w3id.org/gerps/ontology/software> rdf:type owl:Ontology ;
-                                                 owl:versionIRI <https://w3id.org/gerps/ontology/software/1.0/> ;
+                                                 owl:versionIRI <https://w3id.org/gerps/ontology/software/1.1/> ;
                                                  owl:imports <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
                                                  dct:abstract "Ontologie, die Software, ihre Dokumentation und Informationen über aktive Softwareinstanzen darstellt."@de ,
                                                               "Ontology representing software, its documentation and information about deployed instances of software."@en ;
@@ -19,13 +19,14 @@
                                                                  "Maximilian Raupach" ;
                                                  dct:creator "openDVA" ;
                                                  dct:license <http://creativecommons.org/licenses/by/4.0/> ;
-                                                 dct:modified "20 Dec, 2024" ;
+                                                 dct:modified "2025-03-04" ;
                                                  dct:title "GerPS-Software"@de ,
                                                            "GerPS-Software"@en ;
                                                  vann:preferredNamespacePrefix "gos"@en ;
                                                  vann:preferredNamespaceUri "https://w3id.org/gerps/ontology/software" ;
+                                                 owl:priorVersion <https://w3id.org/gerps/ontology/software/1.0/> ;
                                                  dct:description "![Diagram](gos_diagram.svg)" ;
-                                                 owl:versionInfo "1.0" ;
+                                                 owl:versionInfo "1.1" ;
                                                  schema:citation "Cite this vocabulary as: openDVA, GerPS-Software"@en ,
                                                                  "Zitieren Sie dieses Vokabular als: openDVA, GerPS-Software"@de .
 
@@ -137,7 +138,9 @@ schema:citation rdf:type owl:AnnotationProperty .
              rdfs:domain :GPS_0000017 ;
              rdfs:range :GPS_0000005 ;
              rdfs:label "benötigt Instanz von"@de ,
-                        "requires instance of"@en .
+                        "requires instance of"@en ;
+             rdfs:comment "Links an automation component to external software services that are required for the automation component to perform its function."@en ,
+                          "Verbindet eine Automatisierungskomponente mit externen Softwarediensten, die die Automatisierungskomponente benötigt, um ihre Funktion zu erfüllen."@de .
 
 
 #################################################################
