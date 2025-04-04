@@ -1,0 +1,229 @@
+competency-questions:
+  -
+    plain: "Welche Technische Komponenten(TK) tauchen in dem Artikel `x` auf?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+      SELECT ?tk WHERE {
+        <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000019> gpss:GERPSS_0001 ?tk.
+      }
+  -
+    plain: "Welche URL hat der Artikel `x`?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+      SELECT ?url WHERE {
+        <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000021> swo:SWO_0004006 ?url.
+      }
+  -
+    plain: "Welchen Titel hat der Artikel `x`?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+      SELECT ?title WHERE {
+        <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000022> dc:title ?title.
+      }
+  -
+    plain: "In welchen Artikeln taucht die TK `x` auf?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+      SELECT ?art WHERE {
+        ?art a gpss:GERPSS_0009;
+             gpss:GERPSS_0001 <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000024>.
+      }
+  -
+    plain: "Ist die technische Komponente `x` ein Protokoll, eine Datenstruktur oder ein Programm?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      SELECT ?label WHERE {
+        <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000026> a ?type.
+        FILTER (?type in (gpss:GERPSS_0004, gpss:GERPSS_0005, gpss:GERPSS_0006)).
+        ?type rdfs:label ?label.
+      }
+  -
+    plain: "Interagiert die TK `x` mit einem Fachverfahren (FV)?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+      
+      ASK WHERE {
+        <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000028> swo:SWO_0000082 [ a gpss:GERPSS_0005 ].
+      }
+  -
+    plain: "Von welchem Autor kommt der Artikel `x`?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?author WHERE {
+        <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000030> gpss:GERPSS_0011 ?author.
+      }
+  -
+    plain: "Wie ist der Name des Autors `x`?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?label WHERE {
+        <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000031> rdfs:label ?label.
+      }
+  -
+    plain: "Ist der Artikel `x` eine Dokumentation?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      ASK WHERE {
+        <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000033> a gpss:GERPSS_0001 .
+      }
+  - 
+    plain: "Zu welchen Hauptdokumenten gehört der Artikel `x`? (jede TK hat maximal ein Hauptdokument, ein Artikel kann sich aber auf mehrere TK beziehen)"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?primaryDoc WHERE {
+        <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000034> gpss:GERPSS_0011 [ gpss:GERPSS_0012 ?primaryDoc ] .
+      }
+  -
+    plain: "Welche Hauptdokumentationen gibt es?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+      
+      SELECT ?primaryDoc WHERE {
+          ?o gpss:GERPSS_0012 ?primaryDoc.
+      }
+  -
+    plain: "Welche PDFs gibt es?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?pdf WHERE {
+          ?pdf swo:SWO_0004002 swo:SWO_3000015.
+      }
+  -
+    plain: "Welche Websites gibt es?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?website WHERE {
+          ?website swo:SWO_0004002 <http://edamontology.org/format_2331>.
+      }
+  -
+    plain: "Welche Dokumentationen gibt es?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?doc WHERE {
+          ?doc a gpss:GERPSS_0002.
+      }
+  -
+    plain: "Welche Technische Komponenten werden vom FV `x` benutzt?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?tc WHERE {
+          <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000042> swo:SWO_0000082 ?tc.
+      }
+  -
+    plain: "Welche Instanzen des Programms `x` gibt es?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?instance WHERE {
+          <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000044> gpss:GERPSS_0015 ?instance.
+      }
+  -
+    plain: "Welche Basis-URL hat die Programm-Instanz `x`?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?url WHERE {
+          <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000046> gpss:GERPSS_0014 ?url.
+      }
+  -
+    plain: "Welche Institution betreibt die Programm-Instanz `x`?"
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?institution WHERE {
+          <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000047> gpss:GERPSS_0013 ?institution.
+      }
+  -
+    plain: "Welche Programminstanz hat Welche 'URL' und welche zugehörigen 'Parameter', wird von einem Bestimmtem Institute `x` genutzt, ist Instanz eines Programms und löst eine bestimmte Aufgabe `y`."
+    query: |-
+      PREFIX gpss: <https://w3id.org/GerPS-onto/software#>
+      PREFIX swo: <http://www.ebi.ac.uk/swo/>
+      PREFIX dc: <http://purl.org/dc/elements/1.1/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+      SELECT ?instance ?url ?parameter WHERE {
+          ?instance gpss:GERPSS_0013 <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000050>.
+          ?instance gpss:GERPSS_0015 ?software.
+
+          <https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000052> gpss:GERPSS_0018 ?software.
+
+          ?instance gpss:GERPSS_0014 ?url.
+          ?instance gpss:GERPSS_0021 ?parameter.
+      }
