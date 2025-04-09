@@ -1,23 +1,11 @@
-@prefix : <https://w3id.org/GerPS-onto/software#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix efo: <http://www.ebi.ac.uk/efo/> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix : <https://w3id.org/gerps/ontology/software/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix swo: <http://www.ebi.ac.uk/swo/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix gpss: <https://w3id.org/GerPS-onto/software#> .
+@prefix gpss: <https://w3id.org/gerps/ontology/software/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
-@prefix terms: <http://purl.org/dc/terms/> .
-@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
-@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
-@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 @prefix edamontology: <http://edamontology.org#> .
-@base <https://w3id.org/GerPS-onto/software#> .
+@base <https://w3id.org/gerps/ontology/software/> .
 
 #################################################################
 #    Individuals
