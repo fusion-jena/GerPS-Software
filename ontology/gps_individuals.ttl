@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix swo: <http://www.ebi.ac.uk/swo/> .
-@prefix gpss: <https://w3id.org/gerps/ontology/software/> .
+@prefix : <https://w3id.org/gerps/ontology/software/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix edamontology: <http://edamontology.org#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -13,109 +13,109 @@
 #################################################################
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000000
-gpss:GERPSS_E000000000 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0002 ;
+:GPS_E000000000 rdf:type owl:NamedIndividual ,
+                                :GPS_0000002 ;
                        swo:SWO_0004006 "http://www.jenpower.com" ;
                        rdfs:label "Jenpower Website"@de .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000001
-gpss:GERPSS_E000000001 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0002 ;
+:GPS_E000000001 rdf:type owl:NamedIndividual ,
+                                :GPS_0000002 ;
                        swo:SWO_0004006 "http://www.jengovern.com" ;
                        rdfs:label "Jengovern Website"@de .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000002
-gpss:GERPSS_E000000002 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0002 ;
+:GPS_E000000002 rdf:type owl:NamedIndividual ,
+                                :GPS_0000002 ;
                        swo:SWO_0004006 "http://www.jendev.com" ;
                        rdfs:label "Jendev Website"@de .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000003
-gpss:GERPSS_E000000003 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0002 ;
+:GPS_E000000003 rdf:type owl:NamedIndividual ,
+                                :GPS_0000002 ;
                        swo:SWO_0004006 "http://www.jentower.com" ;
                        rdfs:label "Jentower Website"@de .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000004
-gpss:GERPSS_E000000004 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0002 ;
+:GPS_E000000004 rdf:type owl:NamedIndividual ,
+                                :GPS_0000002 ;
                        swo:SWO_0004006 "http://www.jenflux.com" ;
                        rdfs:label "Jenflux Website"@de .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000005
-gpss:GERPSS_E000000005 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0002 ;
+:GPS_E000000005 rdf:type owl:NamedIndividual ,
+                                :GPS_0000002 ;
                        swo:SWO_0004006 "http://www.jenfield.com" ;
                        rdfs:label "Jenfield Website"@de .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000006
-gpss:GERPSS_E000000006 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0002 ;
+:GPS_E000000006 rdf:type owl:NamedIndividual ,
+                                :GPS_0000002 ;
                        swo:SWO_0004006 "http://www.garden.com" ;
                        rdfs:label "Garden Website"@de .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000007
-gpss:GERPSS_E000000007 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0002 ;
+:GPS_E000000007 rdf:type owl:NamedIndividual ,
+                                :GPS_0000002 ;
                        swo:SWO_0004006 "http://www.jengarden.com" ;
                        rdfs:label "JenGarden Website"@de .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000014
-gpss:GERPSS_E000000014 rdf:type owl:NamedIndividual ,
+:GPS_E000000014 rdf:type owl:NamedIndividual ,
                                 <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> ;
                        rdfs:label "Send Demo Request Task"@en ;
-                       gpss:GERPSS_0018 gpss:GERPSS_E000000015 .
+                       :GPS_0000018 :GPS_E000000015 .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000015
-gpss:GERPSS_E000000015 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0017 ;
+:GPS_E000000015 rdf:type owl:NamedIndividual ,
+                                :GPS_0000017 ;
                        rdfs:label "RequestCatcher Middleware"@en ;
-                       gpss:GERPSS_0019 gpss:GERPSS_E000000017 .
+                       :GPS_0000019 :GPS_E000000017 .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000016
-gpss:GERPSS_E000000016 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0016 ;
+:GPS_E000000016 rdf:type owl:NamedIndividual ,
+                                :GPS_0000016 ;
                        rdfs:label "RequestCatcher Central Instance"@en ;
-                       gpss:GERPSS_0014 "requestcatcher.com" ;
-                       gpss:GERPSS_0015 gpss:GERPSS_E000000017 ;
-                       gpss:GERPSS_0021 "" .
+                       :GPS_0000014 "requestcatcher.com" ;
+                       :GPS_0000015 :GPS_E000000017 ;
+                       :GPS_0000021 "" .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000017
-gpss:GERPSS_E000000017 rdf:type owl:NamedIndividual ,
-                                gpss:GERPSS_0005 ;
+:GPS_E000000017 rdf:type owl:NamedIndividual ,
+                                :GPS_0000005 ;
                        rdfs:label "RequestCatcher Software"@en .
 
 
 ###  https://w3id.org/GerPS-onto/software#GERPSS_E000000018
-gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
+:GPS_E000000018 rdf:type owl:NamedIndividual ,
                                 <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> ;
                        rdfs:label "Ablegen Task"@de .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000019
-:GERPSS_E000000019 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0009 ;
+:GPS_E000000019 rdf:type owl:NamedIndividual ,
+                            :GPS_0000009 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: article-01" ,
                                 "Test instance for testing SPARQL Query with CQ1." ;
                    rdfs:label "Test Article for CQ1"@en ;
-                   gpss:GERPSS_0001 :GERPSS_E000000020 .
+                   :GPS_0000001 :GPS_E000000020 .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000020
-:GERPSS_E000000020 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0003 ;
+:GPS_E000000020 rdf:type owl:NamedIndividual ,
+                            :GPS_0000003 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: technicalComponent-01" ,
                                 "Test instance for testing SPARQL Query with CQ1." ;
@@ -123,8 +123,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000021
-:GERPSS_E000000021 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0009 ;
+:GPS_E000000021 rdf:type owl:NamedIndividual ,
+                            :GPS_0000009 ;
                    swo:SWO_0004006 "http://example.com/cq2-article-url" ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: article-02" ,
@@ -133,8 +133,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000022
-:GERPSS_E000000022 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0009 ;
+:GPS_E000000022 rdf:type owl:NamedIndividual ,
+                            :GPS_0000009 ;
                    dc:title "Understanding RDF and SPARQL" ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: article-03" ,
@@ -143,18 +143,18 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000023
-:GERPSS_E000000023 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0009 ;
+:GPS_E000000023 rdf:type owl:NamedIndividual ,
+                            :GPS_0000009 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: article-04" ,
                                 "Test instance for testing SPARQL Query with CQ4." ;
                    rdfs:label "Test Article for CQ4"@en ;
-                   gpss:GERPSS_0001 :GERPSS_E000000024 .
+                   :GPS_0000001 :GPS_E000000024 .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000024
-:GERPSS_E000000024 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0003 ;
+:GPS_E000000024 rdf:type owl:NamedIndividual ,
+                            :GPS_0000003 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: technicalComponent-02" ,
                                 "Test instance for testing SPARQL Query with CQ4." ;
@@ -162,8 +162,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000025
-:GERPSS_E000000025 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0004 ;
+:GPS_E000000025 rdf:type owl:NamedIndividual ,
+                            :GPS_0000004 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: datastructure-01" ,
                                 "Test instance for testing SPARQL Query with CQ5." ;
@@ -171,8 +171,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000026
-:GERPSS_E000000026 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0005 ;
+:GPS_E000000026 rdf:type owl:NamedIndividual ,
+                            :GPS_0000005 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: program-01" ,
                                 "Test instance for testing SPARQL Query with CQ5." ;
@@ -180,8 +180,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000027
-:GERPSS_E000000027 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0006 ;
+:GPS_E000000027 rdf:type owl:NamedIndividual ,
+                            :GPS_0000006 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: protocol-01" ,
                                 "Test instance for testing SPARQL Query with CQ5." ;
@@ -189,9 +189,9 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000028
-:GERPSS_E000000028 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0010 ;
-                   swo:SWO_0000082 :GERPSS_E000000029 ;
+:GPS_E000000028 rdf:type owl:NamedIndividual ,
+                            :GPS_0000010 ;
+                   swo:SWO_0000082 :GPS_E000000029 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: administrative-process-01" ,
                                 "Test instance for testing SPARQL Query with CQ6." ;
@@ -199,8 +199,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000029
-:GERPSS_E000000029 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0005 ;
+:GPS_E000000029 rdf:type owl:NamedIndividual ,
+                            :GPS_0000005 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: program-01" ,
                                 "Test instance for testing SPARQL Query with CQ6." ;
@@ -208,18 +208,18 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000030
-:GERPSS_E000000030 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0009 ;
+:GPS_E000000030 rdf:type owl:NamedIndividual ,
+                            :GPS_0000009 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: article-01" ,
                                 "Test instance for testing SPARQL Query with CQ7." ;
                    rdfs:label "Test Article for CQ7"@en ;
-                   gpss:GERPSS_0011 :GERPSS_E000000031 .
+                   :GPS_0000011 :GPS_E000000031 .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000031
-:GERPSS_E000000031 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0007 ;
+:GPS_E000000031 rdf:type owl:NamedIndividual ,
+                            :GPS_0000007 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: author-01" ,
                                 "Test instance for testing SPARQL Query with CQ8." ;
@@ -227,8 +227,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000032
-:GERPSS_E000000032 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0009 ;
+:GPS_E000000032 rdf:type owl:NamedIndividual ,
+                            :GPS_0000009 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: labeled-01" ,
                                 "Test instance for testing SPARQL Query with rdfs:label." ;
@@ -236,8 +236,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000033
-:GERPSS_E000000033 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0001 ;
+:GPS_E000000033 rdf:type owl:NamedIndividual ,
+                            :GPS_0000001 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: documentation-01" ,
                                 "Test instance for testing SPARQL Query with CQ9." ;
@@ -245,28 +245,28 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000034
-:GERPSS_E000000034 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0009 ;
+:GPS_E000000034 rdf:type owl:NamedIndividual ,
+                            :GPS_0000009 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: article-01" ,
                                 "Test instance for testing SPARQL Query with CQ10." ;
                    rdfs:label "Test Article for CQ10"@en ;
-                   gpss:GERPSS_0011 :GERPSS_E000000035 .
+                   :GPS_0000011 :GPS_E000000035 .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000035
-:GERPSS_E000000035 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0002 ;
+:GPS_E000000035 rdf:type owl:NamedIndividual ,
+                            :GPS_0000002 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: documentation-01" ,
                                 "Test instance for testing SPARQL Query with CQ10." ;
                    rdfs:label "Test Primary Documentation for CQ10"@en ;
-                   gpss:GERPSS_0012 :GERPSS_E000000036 .
+                   :GPS_0000012 :GPS_E000000036 .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000036
-:GERPSS_E000000036 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0002 ;
+:GPS_E000000036 rdf:type owl:NamedIndividual ,
+                            :GPS_0000002 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: documentation-02" ,
                                 "Test instance for testing SPARQL Query with CQ10." ;
@@ -274,18 +274,18 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000037
-:GERPSS_E000000037 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0002 ;
+:GPS_E000000037 rdf:type owl:NamedIndividual ,
+                            :GPS_0000002 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: documentation-01" ,
                                 "Test instance for testing SPARQL Query with CQ11." ;
                    rdfs:label "Documentation for CQ11"@en ;
-                   gpss:GERPSS_0012 :GERPSS_E000000038 .
+                   :GPS_0000012 :GPS_E000000038 .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000038
-:GERPSS_E000000038 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0002 ;
+:GPS_E000000038 rdf:type owl:NamedIndividual ,
+                            :GPS_0000002 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: documentation-02" ,
                                 "Test instance for testing SPARQL Query with CQ11." ;
@@ -293,9 +293,9 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000039
-:GERPSS_E000000039 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0002 ;
-                   swo:SWO_0004002 <http://edamontology.org/format_2331> ;
+:GPS_E000000039 rdf:type owl:NamedIndividual ,
+                            :GPS_0000002 ;
+                   swo:SWO_0004002 swo:SWO_3000015 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: pdf-resource-01" ,
                                 "Test instance for testing SPARQL Query with CQ12." ;
@@ -303,8 +303,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000040
-:GERPSS_E000000040 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0002 ;
+:GPS_E000000040 rdf:type owl:NamedIndividual ,
+                            :GPS_0000002 ;
                    swo:SWO_0004002 <http://edamontology.org/format_2331> ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: website-resource-01" ,
@@ -313,8 +313,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000041
-:GERPSS_E000000041 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0002 ;
+:GPS_E000000041 rdf:type owl:NamedIndividual ,
+                            :GPS_0000002 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: documentation-resource-01" ,
                                 "Test instance for testing SPARQL Query with CQ14." ;
@@ -322,9 +322,9 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000042
-:GERPSS_E000000042 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0010 ;
-                   swo:SWO_0000082 :GERPSS_E000000043 ;
+:GPS_E000000042 rdf:type owl:NamedIndividual ,
+                            :GPS_0000010 ;
+                   swo:SWO_0000082 :GPS_E000000043 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: administrative-process-01" ,
                                 "Test instance for testing SPARQL Query with CQ15." ;
@@ -332,8 +332,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000043
-:GERPSS_E000000043 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0003 ;
+:GPS_E000000043 rdf:type owl:NamedIndividual ,
+                            :GPS_0000003 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: technical-component-01" ,
                                 "Test instance for testing SPARQL Query with CQ15." ;
@@ -341,18 +341,18 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000044
-:GERPSS_E000000044 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0005 ;
+:GPS_E000000044 rdf:type owl:NamedIndividual ,
+                            :GPS_0000005 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: program-01" ,
                                 "Test instance for testing SPARQL Query with CQ16." ;
                    rdfs:label "Program for CQ16"@en ;
-                   gpss:GERPSS_0015 :GERPSS_E000000045 .
+                   :GPS_0000015 :GPS_E000000045 .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000045
-:GERPSS_E000000045 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0016 ;
+:GPS_E000000045 rdf:type owl:NamedIndividual ,
+                            :GPS_0000016 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: program-instance-01" ,
                                 "Test instance for testing SPARQL Query with CQ16." ;
@@ -360,28 +360,28 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000046
-:GERPSS_E000000046 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0016 ;
+:GPS_E000000046 rdf:type owl:NamedIndividual ,
+                            :GPS_0000016 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: program-instance-02" ,
                                 "Test instance for testing SPARQL Query with CQ17." ;
                    rdfs:label "Program Instance for CQ17"@en ;
-                   gpss:GERPSS_0014 "http://example.com/program-instance-url" .
+                   :GPS_0000014 "http://example.com/program-instance-url" .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000047
-:GERPSS_E000000047 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0016 ;
+:GPS_E000000047 rdf:type owl:NamedIndividual ,
+                            :GPS_0000016 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: program-instance-03" ,
                                 "Test instance for testing SPARQL Query with CQ18." ;
                    rdfs:label "Program Instance for CQ18"@en ;
-                   gpss:GERPSS_0013 :GERPSS_E000000048 .
+                   :GPS_0000013 :GPS_E000000048 .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000048
-:GERPSS_E000000048 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0007 ;
+:GPS_E000000048 rdf:type owl:NamedIndividual ,
+                            :GPS_0000007 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: institution-01" ,
                                 "Test instance for testing SPARQL Query with CQ18." ;
@@ -389,21 +389,21 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000049
-:GERPSS_E000000049 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0016 ;
+:GPS_E000000049 rdf:type owl:NamedIndividual ,
+                            :GPS_0000016 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: program-instance-04" ,
                                 "Test instance for testing SPARQL Query with CQ19." ;
                    rdfs:label "Program Instance for CQ19"@en ;
-                   gpss:GERPSS_0013 :GERPSS_E000000050 ;
-                   gpss:GERPSS_0014 "http://example.com/program-instance-04-url" ;
-                   gpss:GERPSS_0015 :GERPSS_E000000051 ;
-                   gpss:GERPSS_0021 "ParameterXYZ" .
+                   :GPS_0000013 :GPS_E000000050 ;
+                   :GPS_0000014 "http://example.com/program-instance-04-url" ;
+                   :GPS_0000015 :GPS_E000000051 ;
+                   :GPS_0000021 "ParameterXYZ" .
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000050
-:GERPSS_E000000050 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0007 ;
+:GPS_E000000050 rdf:type owl:NamedIndividual ,
+                            :GPS_0000007 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: institution-02" ,
                                 "Test instance for testing SPARQL Query with CQ19." ;
@@ -411,8 +411,8 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000051
-:GERPSS_E000000051 rdf:type owl:NamedIndividual ,
-                            gpss:GERPSS_0005 ;
+:GPS_E000000051 rdf:type owl:NamedIndividual ,
+                            :GPS_0000005 ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: software-02" ,
                                 "Test instance for testing SPARQL Query with CQ19." ;
@@ -420,13 +420,13 @@ gpss:GERPSS_E000000018 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/GerPS-onto/software-testversion#GERPSS_E000000052
-:GERPSS_E000000052 rdf:type owl:NamedIndividual ,
+:GPS_E000000052 rdf:type owl:NamedIndividual ,
                             <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> ;
                    rdfs:comment "Author: Heinz" ,
                                 "Entity: task-01" ,
                                 "Test instance for testing SPARQL Query with CQ19." ;
                    rdfs:label "Task for CQ19"@en ;
-                   gpss:GERPSS_0018 :GERPSS_E000000051 .
+                   :GPS_0000018 :GPS_E000000051 .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

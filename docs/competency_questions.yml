@@ -7,7 +7,7 @@ competency-questions:
       PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
       SELECT ?tk WHERE {
-        <https://w3id.org/gerps/ontology/software/GERPSS_E000000019> gps:GERPSS_0001 ?tk.
+        gps:GPS_E000000019 gps:GPS_0000001 ?tk.
       }
   -
     plain: "Welche URL hat der Artikel `x`?"
@@ -17,7 +17,7 @@ competency-questions:
       PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
       SELECT ?url WHERE {
-        <https://w3id.org/gerps/ontology/software/GERPSS_E000000021> swo:SWO_0004006 ?url.
+        gps:GPS_E000000021 swo:SWO_0004006 ?url.
       }
   -
     plain: "Welchen Titel hat der Artikel `x`?"
@@ -27,7 +27,7 @@ competency-questions:
       PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
       SELECT ?title WHERE {
-        <https://w3id.org/gerps/ontology/software/GERPSS_E000000022> dc:title ?title.
+        gps:GPS_E000000022 dc:title ?title.
       }
   -
     plain: "In welchen Artikeln taucht die TK `x` auf?"
@@ -37,8 +37,8 @@ competency-questions:
       PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
       SELECT ?art WHERE {
-        ?art a gps:GERPSS_0009;
-             gps:GERPSS_0001 <https://w3id.org/gerps/ontology/software/GERPSS_E000000024>.
+        ?art a gps:GPS_0000009;
+             gps:GPS_0000001 gps:GPS_E000000024.
       }
   -
     plain: "Ist die technische Komponente `x` ein Protokoll, eine Datenstruktur oder ein Programm?"
@@ -49,8 +49,8 @@ competency-questions:
       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
       SELECT ?label WHERE {
-        <https://w3id.org/gerps/ontology/software/GERPSS_E000000026> a ?type.
-        FILTER (?type in (gps:GERPSS_0004, gps:GERPSS_0005, gps:GERPSS_0006)).
+        gps:GPS_E000000026 a ?type.
+        FILTER (?type in (gps:GPS_0000004, gps:GPS_0000005, gps:GPS_0000006)).
         ?type rdfs:label ?label.
       }
   -
@@ -63,7 +63,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
       
       ASK WHERE {
-        <https://w3id.org/gerps/ontology/software/GERPSS_E000000028> swo:SWO_0000082 [ a gps:GERPSS_0005 ].
+        gps:GPS_E000000028 swo:SWO_0000082 [ a gps:GPS_0000005 ].
       }
   -
     plain: "Von welchem Autor kommt der Artikel `x`?"
@@ -75,7 +75,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       SELECT ?author WHERE {
-        <https://w3id.org/gerps/ontology/software/GERPSS_E000000030> gps:GERPSS_0011 ?author.
+        gps:GPS_E000000030 gps:GPS_0000011 ?author.
       }
   -
     plain: "Wie ist der Name des Autors `x`?"
@@ -87,7 +87,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       SELECT ?label WHERE {
-        <https://w3id.org/gerps/ontology/software/GERPSS_E000000031> rdfs:label ?label.
+        gps:GPS_E000000031 rdfs:label ?label.
       }
   -
     plain: "Ist der Artikel `x` eine Dokumentation?"
@@ -99,7 +99,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       ASK WHERE {
-        <https://w3id.org/gerps/ontology/software/GERPSS_E000000033> a gps:GERPSS_0001 .
+        gps:GPS_E000000033 a gps:GPS_0000001 .
       }
   - 
     plain: "Zu welchen Hauptdokumenten gehört der Artikel `x`? (jede TK hat maximal ein Hauptdokument, ein Artikel kann sich aber auf mehrere TK beziehen)"
@@ -111,7 +111,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       SELECT ?primaryDoc WHERE {
-        <https://w3id.org/gerps/ontology/software/GERPSS_E000000034> gps:GERPSS_0011 [ gps:GERPSS_0012 ?primaryDoc ] .
+        gps:GPS_E000000034 gps:GPS_0000011 [ gps:GPS_0000012 ?primaryDoc ] .
       }
   -
     plain: "Welche Hauptdokumentationen gibt es?"
@@ -123,7 +123,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
       
       SELECT ?primaryDoc WHERE {
-          ?o gps:GERPSS_0012 ?primaryDoc.
+          ?o gps:GPS_0000012 ?primaryDoc.
       }
   -
     plain: "Welche PDFs gibt es?"
@@ -159,7 +159,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       SELECT ?doc WHERE {
-          ?doc a gps:GERPSS_0002.
+          ?doc a gps:GPS_0000002.
       }
   -
     plain: "Welche Technische Komponenten werden vom FV `x` benutzt?"
@@ -171,7 +171,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       SELECT ?tc WHERE {
-          <https://w3id.org/gerps/ontology/software/GERPSS_E000000042> swo:SWO_0000082 ?tc.
+          gps:GPS_E000000042 swo:SWO_0000082 ?tc.
       }
   -
     plain: "Welche Instanzen des Programms `x` gibt es?"
@@ -183,7 +183,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       SELECT ?instance WHERE {
-          <https://w3id.org/gerps/ontology/software/GERPSS_E000000044> gps:GERPSS_0015 ?instance.
+          gps:GPS_E000000044 gps:GPS_0000015 ?instance.
       }
   -
     plain: "Welche Basis-URL hat die Programm-Instanz `x`?"
@@ -195,7 +195,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       SELECT ?url WHERE {
-          <https://w3id.org/gerps/ontology/software/GERPSS_E000000046> gps:GERPSS_0014 ?url.
+          gps:GPS_E000000046 gps:GPS_0000014 ?url.
       }
   -
     plain: "Welche Institution betreibt die Programm-Instanz `x`?"
@@ -207,7 +207,7 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       SELECT ?institution WHERE {
-          <https://w3id.org/gerps/ontology/software/GERPSS_E000000047> gps:GERPSS_0013 ?institution.
+          gps:GPS_E000000047 gps:GPS_0000013 ?institution.
       }
   -
     plain: "Welche Programminstanz hat Welche 'URL' und welche zugehörigen 'Parameter', wird von einem Bestimmtem Institute `x` genutzt, ist Instanz eines Programms und löst eine bestimmte Aufgabe `y`."
@@ -219,11 +219,11 @@ competency-questions:
       PREFIX obo: <http://purl.obolibrary.org/obo/>
 
       SELECT ?instance ?url ?parameter WHERE {
-          ?instance gps:GERPSS_0013 <https://w3id.org/gerps/ontology/software/GERPSS_E000000050>.
-          ?instance gps:GERPSS_0015 ?software.
+          ?instance gps:GPS_0000013 gps:GPS_E000000050.
+          ?instance gps:GPS_0000015 ?software.
 
-          <https://w3id.org/gerps/ontology/software/GERPSS_E000000052> gps:GERPSS_0018 ?software.
+          gps:GPS_E000000052 gps:GPS_0000018 ?software.
 
-          ?instance gps:GERPSS_0014 ?url.
-          ?instance gps:GERPSS_0021 ?parameter.
+          ?instance gps:GPS_0000014 ?url.
+          ?instance gps:GPS_0000021 ?parameter.
       }

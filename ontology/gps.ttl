@@ -61,7 +61,7 @@ schema:citation rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0001
+###  https://w3id.org/gerps/ontology/software/GPS_0001
 :GPS_0000001 rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
              rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000030> ;
@@ -72,7 +72,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "dokumentiert"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0011
+###  https://w3id.org/gerps/ontology/software/GPS_0011
 :GPS_0000011 rdf:type owl:ObjectProperty ;
              rdfs:domain :GPS_0000003 ;
              rdfs:range :GPS_0000007 ;
@@ -82,7 +82,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "hat den Autor"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0012
+###  https://w3id.org/gerps/ontology/software/GPS_0012
 :GPS_0000012 rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :GPS_0000001 ;
              rdf:type owl:FunctionalProperty ;
@@ -94,7 +94,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "ist Hauptdokumentation von"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0013
+###  https://w3id.org/gerps/ontology/software/GPS_0013
 :GPS_0000013 rdf:type owl:ObjectProperty ;
              rdfs:domain :GPS_0000016 ;
              rdfs:range :GPS_0000007 ;
@@ -104,7 +104,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "wird betrieben von"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0015
+###  https://w3id.org/gerps/ontology/software/GPS_0015
 :GPS_0000015 rdf:type owl:ObjectProperty ;
              rdfs:domain :GPS_0000016 ;
              rdfs:range :GPS_0000005 ;
@@ -114,7 +114,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "instance of"@en .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0018
+###  https://w3id.org/gerps/ontology/software/GPS_0018
 :GPS_0000018 rdf:type owl:ObjectProperty ;
              rdfs:domain <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> ;
              rdfs:range :GPS_0000017 ;
@@ -124,7 +124,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "automatisiert durch"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0019
+###  https://w3id.org/gerps/ontology/software/GPS_0019
 :GPS_0000019 rdf:type owl:ObjectProperty ;
              rdfs:domain :GPS_0000017 ;
              rdfs:range :GPS_0000005 ;
@@ -138,7 +138,7 @@ schema:citation rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0014
+###  https://w3id.org/gerps/ontology/software/GPS_0014
 :GPS_0000014 rdf:type owl:DatatypeProperty ;
              rdfs:domain :GPS_0000016 ;
              rdfs:range xsd:string ;
@@ -148,7 +148,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "hat die Basis-URL"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0021
+###  https://w3id.org/gerps/ontology/software/GPS_0021
 :GPS_0000021 rdf:type owl:DatatypeProperty ;
              rdfs:domain :GPS_0000016 ;
              rdfs:range xsd:string ;
@@ -178,7 +178,7 @@ schema:citation rdf:type owl:AnnotationProperty .
 <http://www.ebi.ac.uk/swo/SWO_9000050> rdf:type owl:Class .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0002
+###  https://w3id.org/gerps/ontology/software/GPS_0002
 :GPS_0000002 rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
              rdfs:comment "Schriftliche Aufzeichnungen und Beschreibungen eines Produkts, Systems oder Prozesses, die erstellt werden, um den Benutzern zu helfen, das Produkt zu verstehen, zu bedienen und zu warten."@de ,
@@ -187,7 +187,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "Dokumentation"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0003
+###  https://w3id.org/gerps/ontology/software/GPS_0003
 :GPS_0000003 rdf:type owl:Class ;
              rdfs:comment "A technical component is a distinct unit within a system that can be implemented to perform specific functions."@en ,
                           "Eine technische Komponente ist eine eigenständige Einheit innerhalb eines Systems, die zur Ausführung bestimmter Funktionen eingesetzt werden kann."@de ;
@@ -195,7 +195,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "Technische Komponente"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0004
+###  https://w3id.org/gerps/ontology/software/GPS_0004
 :GPS_0000004 rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ,
                              :GPS_0000003 ;
@@ -205,7 +205,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "Datenstruktur"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0005
+###  https://w3id.org/gerps/ontology/software/GPS_0005
 :GPS_0000005 rdf:type owl:Class ;
              rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000001> ,
                              :GPS_0000006 ;
@@ -215,7 +215,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "Software"@en .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0006
+###  https://w3id.org/gerps/ontology/software/GPS_0006
 :GPS_0000006 rdf:type owl:Class ;
              rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_9000050> ,
                              :GPS_0000003 ;
@@ -225,7 +225,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "Protokol"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0007
+###  https://w3id.org/gerps/ontology/software/GPS_0007
 :GPS_0000007 rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000245> ;
              rdfs:comment "An organization is a structured group of people working together to achieve a common goal. It can assume the role of author for any result created by its constituents."@en ,
@@ -234,7 +234,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "Organization"@en .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0008
+###  https://w3id.org/gerps/ontology/software/GPS_0008
 :GPS_0000008 rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000450> ,
                              :GPS_0000007 ;
@@ -244,7 +244,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "Öffentliche Verwaltung"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0009
+###  https://w3id.org/gerps/ontology/software/GPS_0009
 :GPS_0000009 rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
              rdfs:comment "Schriftlicher Inhalt, der in der Regel in einer Zeitung, einem Magazin oder online veröffentlicht wird und Informationen, Analysen oder Meinungen zu einem bestimmten Thema, Ereignis oder einer Frage enthält."@de ,
@@ -253,7 +253,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "Artikel"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0010
+###  https://w3id.org/gerps/ontology/software/GPS_0010
 :GPS_0000010 rdf:type owl:Class ;
              rdfs:subClassOf :GPS_0000005 ;
              rdfs:comment "Im Allgemeinen eine Software, die genutzt wird, um geschäftliche Funktionalitäten auszuführen oder zu unterstützen. Dies können in der föderalen IT-Landschaft konkret Online-Antragsdienste für die Erstellung und den Versand von Anträgen an die öffentliche Verwaltung sein. Fachapplikationen können jedoch auch Fachverfahren sein, die Anträge entgegennehmen bzw. andere fachliche Prozesse innerhalb der öffentlichen Verwaltung IT-seitig unterstützen. Der Begriff der Fachapplikation ist als eine logische Einheit zu verstehen, die keine Aussage über die technische Komplexität des Informationssystems trifft."@de ,
@@ -262,7 +262,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "Fachapplikation"@de .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0016
+###  https://w3id.org/gerps/ontology/software/GPS_0016
 :GPS_0000016 rdf:type owl:Class ;
              rdfs:comment "A specific instance of software that can be accessed via a URL."@en ,
                           "Eine konkrete Instanz einer Software, die über eine URL erreichbar ist."@de ;
@@ -270,7 +270,7 @@ schema:citation rdf:type owl:AnnotationProperty .
                         "service instance"@en .
 
 
-###  https://w3id.org/gerps/ontology/software/GERPSS_0017
+###  https://w3id.org/gerps/ontology/software/GPS_0017
 :GPS_0000017 rdf:type owl:Class ;
              rdfs:comment "A self-contained module that directly automates a specific task or process, encapsulating necessary logic and actions, and may depend on external software, systems, or services to perform its function."@en ,
                           "Ein in sich geschlossenes Modul, das eine bestimmte Aufgabe oder einen bestimmten Prozess direkt automatisiert, indem es die erforderliche Logik und die notwendigen Aktionen kapselt, und das zur Erfüllung seiner Funktion von externer Software, Systemen oder Diensten abhängig sein kann."@de ;
